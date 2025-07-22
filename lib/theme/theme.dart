@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const kPrimaryColor = Colors.indigo;
-const kDarkSurface = Color(0xFF1E1E1E);
+const kPrimaryColor = Color(0xFF87835E);
 
 ThemeData lightTheme() {
   final colorScheme = ColorScheme.fromSeed(
@@ -10,7 +9,7 @@ ThemeData lightTheme() {
     brightness: Brightness.light,
   );
 
-  final baseTextTheme = GoogleFonts.openSansTextTheme();
+  final baseTextTheme = GoogleFonts.playfairDisplayTextTheme();
 
   return ThemeData(
     colorScheme: colorScheme,

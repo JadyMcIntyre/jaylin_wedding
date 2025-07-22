@@ -17,18 +17,18 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
+    // return MultiBlocProvider(
+      // providers: [
         // BlocProvider(create: (_) => sl<AuthCubit>()),
         // BlocProvider(create: (_) => sl<OnboardingCubit>()),
-      ],
-      child: MaterialApp.router(
+      // ],
+      return MaterialApp.router(
         routerConfig: appRouter,
-        title: 'Nestra',
+        title: 'Jaylin',
         theme: lightTheme(),
         darkTheme: darkTheme(),
-        themeMode: ThemeMode.system,
-      ),
-    );
+        themeMode: ThemeMode.light,
+      );
+    // );
   }
 }
