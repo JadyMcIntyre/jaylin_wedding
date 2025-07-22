@@ -38,7 +38,34 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.4),
         foregroundColor: Theme.of(context).colorScheme.surface,
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Kaylin & Jady', style: Theme.of(context).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold)),
+              Text('May 01, 2026', style: Theme.of(context).textTheme.bodySmall),
+              Text('Oxbow Country Estate', style: Theme.of(context).textTheme.bodySmall),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 0),
+                child: Divider(),
+              ),
+              Text('Home', style: Theme.of(context).textTheme.headlineSmall),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text('Wedding Party', style: Theme.of(context).textTheme.headlineSmall),
+              ),
+              Text('Schedule', style: Theme.of(context).textTheme.headlineSmall),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text('FAQs', style: Theme.of(context).textTheme.headlineSmall),
+              ),
+              Text('Accomadation', style: Theme.of(context).textTheme.headlineSmall),
+            ],
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,7 +82,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
             SizedBox(height: 10),
             Text('Kaylin Schultz', style: Theme.of(context).textTheme.headlineLarge, textAlign: TextAlign.center),
             Padding(
