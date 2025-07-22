@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:jaylin_wedding/features/home/presentation/get_time.dart';
 
 class HomePage extends StatefulWidget {
@@ -40,28 +41,37 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Kaylin & Jady', style: Theme.of(context).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold)),
+              Text(
+                'Kaylin & Jady',
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold),
+              ),
               Text('May 01, 2026', style: Theme.of(context).textTheme.bodySmall),
               Text('Oxbow Country Estate', style: Theme.of(context).textTheme.bodySmall),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 0),
-                child: Divider(),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10), child: Divider()),
+              TextButton(
+                onPressed: () => context.go('/home'),
+                child: Text('Home', style: Theme.of(context).textTheme.headlineSmall),
               ),
-              Text('Home', style: Theme.of(context).textTheme.headlineSmall),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
+              TextButton(
+                onPressed: () {},
                 child: Text('Wedding Party', style: Theme.of(context).textTheme.headlineSmall),
               ),
-              Text('Schedule', style: Theme.of(context).textTheme.headlineSmall),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
+              TextButton(
+                onPressed: () {},
+                child: Text('Schedule', style: Theme.of(context).textTheme.headlineSmall),
+              ),
+              TextButton(
+                onPressed: () {},
                 child: Text('FAQs', style: Theme.of(context).textTheme.headlineSmall),
               ),
-              Text('Accomadation', style: Theme.of(context).textTheme.headlineSmall),
+              TextButton(
+                onPressed: () {},
+                child: Text('Accomadation', style: Theme.of(context).textTheme.headlineSmall),
+              ),
             ],
           ),
         ),
