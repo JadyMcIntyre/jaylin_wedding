@@ -39,10 +39,27 @@ class _HomePageState extends State<HomePage> {
         foregroundColor: Theme.of(context).colorScheme.surface,
       ),
       drawer: Drawer(),
-      body: Center(
-        child: Text(
-          'The wedding is in $headline '
-          '(${_diff.minutes} minutes / ${_diff.seconds} seconds)',
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 300,
+              width: double.infinity,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(0), // or whatever
+                child: Image.asset(
+                  'assets/hero.jpg',
+                  fit: BoxFit.cover, // fill width, crop overflow
+                ),
+              ),
+            ),
+
+            Text(
+              'The wedding is in $headline '
+              '(${_diff.minutes} minutes / ${_diff.seconds} seconds)',
+            ),
+          ],
         ),
       ),
     );
