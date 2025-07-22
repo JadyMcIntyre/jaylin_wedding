@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
               ),
               TextButton(
                 onPressed: () {},
-                child: Text('Accomadation', style: Theme.of(context).textTheme.headlineSmall),
+                child: Text('Accomodation', style: Theme.of(context).textTheme.headlineSmall),
               ),
             ],
           ),
