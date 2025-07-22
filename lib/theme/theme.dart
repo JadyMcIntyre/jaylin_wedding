@@ -9,17 +9,12 @@ ThemeData lightTheme() {
     brightness: Brightness.light,
   );
 
-  final baseTextTheme = GoogleFonts.playfairDisplayTextTheme();
+  final textTheme = GoogleFonts.playfairDisplayTextTheme();
 
   return ThemeData(
     colorScheme: colorScheme,
     scaffoldBackgroundColor: colorScheme.surface,
-    textTheme: baseTextTheme.copyWith(
-      titleMedium: baseTextTheme.titleMedium?.copyWith(
-        fontWeight: FontWeight.bold,
-        color: colorScheme.primary,
-      ),
-    ),
+    textTheme: textTheme,
     primaryIconTheme: IconThemeData(color: colorScheme.primary),
     filledButtonTheme: FilledButtonThemeData(
       style: ButtonStyle(

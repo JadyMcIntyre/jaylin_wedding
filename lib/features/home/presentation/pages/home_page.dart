@@ -35,13 +35,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.4),
         foregroundColor: Theme.of(context).colorScheme.surface,
       ),
       drawer: Drawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: 300,
@@ -55,9 +56,44 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            Text(
-              'The wedding is in $headline '
-              '(${_diff.minutes} minutes / ${_diff.seconds} seconds)',
+            SizedBox(height: 10),
+            Text('Kaylin Schultz', style: Theme.of(context).textTheme.headlineLarge, textAlign: TextAlign.center),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Text('and', style: Theme.of(context).textTheme.titleSmall, textAlign: TextAlign.center),
+            ),
+            Text('Jady McIntyre', style: Theme.of(context).textTheme.headlineLarge, textAlign: TextAlign.center),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15),
+              child: Text(headline, style: Theme.of(context).textTheme.bodySmall, textAlign: TextAlign.center),
+            ),
+            Text('Oxbow Estate', style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+            Text('BHS', style: Theme.of(context).textTheme.labelSmall, textAlign: TextAlign.center),
+            const SizedBox(height: 16),
+            Text('May 1', style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+            Text('2026', style: Theme.of(context).textTheme.labelSmall, textAlign: TextAlign.center),
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: FilledButton(onPressed: () {}, child: Text('RSVP')),
+            ),
+            Text('How We Met', style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+            Text('1.23.18', style: Theme.of(context).textTheme.titleSmall, textAlign: TextAlign.center),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                'wekllskdjfalskdfj jfalksjflk asjdflfadsjdl fajsl alsfdkjdskk adklsd adklsflskd jklasdjfalks lkjkl kl sdklf kjlkjsf lkj ljk llj lsfj',
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Text('The Proposal', style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+            Text('3.07.24', style: Theme.of(context).textTheme.titleSmall, textAlign: TextAlign.center),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                'wekllskdjfalskdfj jfalksjflk asjdflfadsjdl fajsl alsfdkjdskk adklsd adklsflskd jklasdjfalks lkjkl kl sdklf kjlkjsf lkj ljk llj lsfj',
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
