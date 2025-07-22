@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text('Home', style: Theme.of(context).textTheme.headlineSmall),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () => context.go('/wedding_party'),
                 child: Text('Wedding Party', style: Theme.of(context).textTheme.headlineSmall),
               ),
               TextButton(
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 16),
             Text('Kaylin Schultz', style: Theme.of(context).textTheme.headlineLarge, textAlign: TextAlign.center),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8),
