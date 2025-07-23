@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -23,7 +25,7 @@ class CustomDrawer extends StatelessWidget {
               child: Text('Wedding Party', style: Theme.of(context).textTheme.headlineSmall),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () => context.go('/schedule'),
               child: Text('Schedule', style: Theme.of(context).textTheme.headlineSmall),
             ),
             TextButton(
@@ -35,7 +37,7 @@ class CustomDrawer extends StatelessWidget {
               child: Text('FAQs', style: Theme.of(context).textTheme.headlineSmall),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () => context.go('/accomodation'),
               child: Text('Accomodation', style: Theme.of(context).textTheme.headlineSmall),
             ),
           ],
