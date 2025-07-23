@@ -12,7 +12,7 @@ class FaqList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: items.length,
@@ -24,6 +24,8 @@ class FaqList extends StatelessWidget {
           children: [Text(item.a)],
         );
       },
+      separatorBuilder: (_, __) => const Divider(height: 0, thickness: 0.6),
     );
   }
 }
+
