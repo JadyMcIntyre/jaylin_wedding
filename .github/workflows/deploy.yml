@@ -25,9 +25,10 @@ jobs:
       - name: Build web release
         run: flutter build web --release
 
-      - name: Fix base href
+      - name: Remove base href line
         run: |
-          sed -i 's@<base href="[^"]*"@<base href="/"@' build/web/index.html
+          # delete the line that starts with <base href=
+          sed -i '/^\s*<base href=.*>$/d' build/web/index.html
 
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v3
