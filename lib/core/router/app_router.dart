@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:jaylin_wedding/features/dress_code/dress_code_page.dart';
 import 'package:jaylin_wedding/features/faqs/faq_page.dart';
 import 'package:jaylin_wedding/features/home/presentation/pages/home_page.dart';
 import 'package:jaylin_wedding/features/wedding_party/wedding_party.dart';
@@ -8,9 +9,10 @@ final GoRouter appRouter = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(path: '/', name: 'home', builder: (context, state) => HomePage()),
-    GoRoute(path: '/wedding_party', name: 'wedding_party', builder: (context, state) => WeddingPartyPage()),
+    GoRoute(path: '/wedding_party', name: 'wedding-party', builder: (context, state) => WeddingPartyPage()),
     GoRoute(path: '/faqs', name: 'faqs', builder: (context, state) => FAQPage()),
     GoRoute(path: '/schedule', name: 'schedule', builder: (context, state) => SchedulePage()),
+    GoRoute(path: '/dress_code', name: 'dress-code', builder: (context, state) => DressCodePage()),
     // GoRoute(
     //   path: '/details/:id',
     //   name: 'details',
