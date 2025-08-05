@@ -17,7 +17,7 @@ class CustomDrawer extends StatelessWidget {
             Text('Oxbow Country Estate', style: Theme.of(context).textTheme.bodySmall),
             Padding(padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10), child: Divider()),
             TextButton(
-              onPressed: () => context.go('/home'),
+              onPressed: () => context.go('/'),
               child: Text('Home', style: Theme.of(context).textTheme.headlineSmall),
             ),
             TextButton(

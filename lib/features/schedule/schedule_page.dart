@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jaylin_wedding/core/drawer.dart';
+import 'package:jaylin_wedding/features/schedule/widgets/timeline.dart';
+import 'package:timelines_plus/timelines_plus.dart';
 
 class SchedulePage extends StatelessWidget {
   const SchedulePage({super.key});
@@ -13,16 +15,7 @@ class SchedulePage extends StatelessWidget {
         foregroundColor: Theme.of(context).colorScheme.surface,
       ),
       drawer: CustomDrawer(),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(height: 40),
-            Text('Here is the schedule'),
-          ],
-        ),
-      ),
+      body: TimelineWidget(),
     );
   }
 }
