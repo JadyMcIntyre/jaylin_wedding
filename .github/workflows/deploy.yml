@@ -1,14 +1,12 @@
 name: Deploy to GitHub Pages
-# <-- grant write to repo contents and pages
 permissions:
   contents: write
-  pages: write
+  pages:    write
   id-token: write
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -16,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # make sure the token from `permissions` is used
           persist-credentials: true
           fetch-depth: 0
 
@@ -27,6 +24,10 @@ jobs:
 
       - name: Build web release
         run: flutter build web --release
+
+      - name: Fix base href
+        run: |
+          sed -i 's@<base href="[^"]*"@<base href="/"@' build/web/index.html
 
       - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v3
