@@ -37,8 +37,8 @@ class CustomDrawer extends StatelessWidget {
               child: Text('FAQs', style: Theme.of(context).textTheme.headlineSmall),
             ),
             TextButton(
-              onPressed: () => context.go('/accomodation'),
-              child: Text('Accomodation', style: Theme.of(context).textTheme.headlineSmall),
+              onPressed: () => context.go('/accommodation'),
+              child: Text('Accommodation', style: Theme.of(context).textTheme.headlineSmall),
             ),
           ],
         ),

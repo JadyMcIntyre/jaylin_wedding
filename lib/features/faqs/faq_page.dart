@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:jaylin_wedding/core/drawer.dart';
 import 'package:jaylin_wedding/features/faqs/faq_widget.dart';
-import 'package:jaylin_wedding/features/wedding_party/person.dart';
 
 class FAQPage extends StatelessWidget {
   const FAQPage({super.key});
@@ -24,8 +22,7 @@ class FAQPage extends StatelessWidget {
             const SizedBox(height: 40),
             FaqList(
               items: [
-                FaqItem('How Many Genders are there?', 'IDK I just got here?!?'),
-                FaqItem('How Many Genders are there?', 'IDK I just got here?!?'),
+                FaqItem('Where is the wedding?', 'Oxbow Country Estate'),
               ],
             ),
           ],

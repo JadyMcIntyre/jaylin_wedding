@@ -35,14 +35,16 @@ class DressCodePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Column(
                     children: [
-                      Text('Ladies', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
-                      FaqList(
-                        items: [
-                          FaqItem(
-                            'Ladies\' Dress Code',
-                            '- Any Color dress (No White, No Black, No Cream)\n- Below the knee dresses only (No cocktail dresses)',
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Column(
+                          children: [
+                            Text('Ladies', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
+                            const SizedBox(height: 10),
+                            Text('- Any Color dress (No White, No Black, No Cream)', textAlign: TextAlign.center),
+                            Text('- Below the knee dresses only (No cocktail dresses)', textAlign: TextAlign.center),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 20),
                       SizedBox(
@@ -60,14 +62,21 @@ class DressCodePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Column(
                     children: [
-                      Text('Gents', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
-                      FaqList(
-                        items: [
-                          FaqItem(
-                            'Men\'s Dress Code',
-                            '- Tie or bow tie in any color\n- Black or White Button Down Shirts\n- Suit Shoes only, no sneakers or casual footwear',
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Column(
+                          children: [
+                            Text(
+                              'Gents',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                              textAlign: TextAlign.center,
+                            ),
+                            const SizedBox(height: 10),
+                            Text('- Tie or bow tie in any color', textAlign: TextAlign.center),
+                            Text('- Black or White Button Down Shirts', textAlign: TextAlign.center),
+                            Text('- Suit Shoes only, no sneakers or casual footwear', textAlign: TextAlign.center),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 20),
                       SizedBox(

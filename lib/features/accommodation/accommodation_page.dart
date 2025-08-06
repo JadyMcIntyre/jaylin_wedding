@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jaylin_wedding/core/drawer.dart';
 
-class AccomodationPage extends StatelessWidget {
-  const AccomodationPage({super.key});
+class AccommodationPage extends StatelessWidget {
+  const AccommodationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
