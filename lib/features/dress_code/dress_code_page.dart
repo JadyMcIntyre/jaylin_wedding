@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jaylin_wedding/core/drawer.dart';
-import 'package:jaylin_wedding/features/dress_code/widgets/static_images.dart';
+import 'package:jaylin_wedding/features/faqs/faq_widget.dart';
 
 class DressCodePage extends StatelessWidget {
   const DressCodePage({super.key});
@@ -14,24 +14,69 @@ class DressCodePage extends StatelessWidget {
         foregroundColor: Theme.of(context).colorScheme.surface,
       ),
       drawer: CustomDrawer(),
-      body: Center(
+      body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 40),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(onPressed: () {}, child: Text('Men')),
+              const SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Dress Code: ', style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+                  Text('Black Tie', style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+                ],
               ),
-              const SizedBox(height: 10),
-              Text('or'),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(onPressed: () {}, child: Text('Women')),
+              Icon(Icons.image, size: 80),
+              const SizedBox(height: 20),
+              Card(
+                elevation: 3,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Column(
+                    children: [
+                      Text('Ladies', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
+                      FaqList(
+                        items: [
+                          FaqItem(
+                            'Ladies\' Dress Code',
+                            '- Any Color dress (No White, No Black, No Cream)\n- Below the knee dresses only (No cocktail dresses)',
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        width: 270,
+                        child: OutlinedButton(onPressed: () {}, child: Text('Ladies')),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Card(
+                elevation: 3,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Column(
+                    children: [
+                      Text('Gents', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
+                      FaqList(
+                        items: [
+                          FaqItem(
+                            'Men\'s Dress Code',
+                            '- Tie or bow tie in any color\n- Black or White Button Down Shirts\n- Suit Shoes only, no sneakers or casual footwear',
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        width: 270,
+                        child: FilledButton(onPressed: () {}, child: Text('Gents')),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
