@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jadylin_wedding.iml" filepath="$PROJECT_DIR$/jadylin_wedding.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/jadylin_wedding_android.iml" filepath="$PROJECT_DIR$/android/jadylin_wedding_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaylin_wedding.iml" filepath="$PROJECT_DIR$/jaylin_wedding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/jaylin_wedding_android.iml" filepath="$PROJECT_DIR$/android/jaylin_wedding_android.iml" />
     </modules>
   </component>
 </project>
